@@ -40,3 +40,8 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
     }
 }
+
+
+// M. Ammar Fadhila Ramadhan
+// 119140029
+// PAM RB

@@ -4,69 +4,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
-function Home() {
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center'
-      }}>
-      <Text style={{
-        fontSize:50,
-      }}>
-        MASUKIN HOME KE SINI
-      </Text>
-    </View>
-  );
-}
-
-function MyTicket() {
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center' 
-      }}>
-      <Text style={{
-        fontSize:50,
-      }}>
-        MASUKIN PESANANAN SAYA KESINI
-        </Text>
-    </View>
-  );
-}
-
-function CancelTicket() {
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center' 
-      }}>
-      <Text style={{
-        fontSize:50,
-      }}>
-        MASUKIN PEMBATALAN KESINI
-        </Text>
-    </View>
-  );
-}
-function Other() {
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center' 
-      }}>
-      <Text style={{
-        fontSize:50,
-      }}>
-        MASUKIN LAINNYA KESINI
-        </Text>
-    </View>
-  );
-}
+import Home from './Navigating/Home';
+import MyTicket from './Navigating/MyTicket';
+import CancelTicket from './Navigating/CancelTicket';
+import Other from './Navigating/Other';
 
 const Tab = createBottomTabNavigator();
 
@@ -75,19 +16,22 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: 'blue',
+        tabBarActiveTintColor: 'white',
+        tabBarInactiveTintColor: 'black',
+        tabBarActiveBackgroundColor:'grey',
+        tabBarHideOnKeyboard:'True',
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="Beranda"
         component={Home}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Beranda',
           tabBarIcon: () => (
             <FontAwesome 
             name="home" 
             color='orange'
-            size={35}
+            size={30}
             />
           ),
         }}
@@ -101,7 +45,7 @@ function MyTabs() {
             <MaterialCommunityIcons 
             name="book" 
             color='orange'
-            size={35}
+            size={30}
             />
           ),
         }}
@@ -115,7 +59,7 @@ function MyTabs() {
             <MaterialCommunityIcons 
             name="book-cancel" 
             color='orange'
-            size={35}
+            size={30}
             />
           ),
         }}
@@ -129,7 +73,7 @@ function MyTabs() {
             <MaterialCommunityIcons 
             name="menu" 
             color='orange'
-            size={35}
+            size={30}
             />
           ),
         }}
