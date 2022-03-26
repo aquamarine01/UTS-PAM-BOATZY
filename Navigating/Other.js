@@ -1,5 +1,10 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Other= ({navigation})=> {
     return (
@@ -11,7 +16,7 @@ const Other= ({navigation})=> {
         <Text style={{
           fontSize:50,
         }}>
-          MASUKIN LAINNYA KESINI
+          Ini Other
           </Text>
       </View>
     );
